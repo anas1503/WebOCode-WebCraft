@@ -1,0 +1,116 @@
+/* These mixins are replacement of Flex Layout*/
+
+// For DOM containers
+// Replacement of fxLayout
+// eg, fxLayout="row" -> @include mp-fx-layout(row)
+// eg, fxLayout.xs="row" -> @include mp-fx-layout(row, xs)
+@mixin mp-fx-layout($direction) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: $direction;
+  }
+  
+  // For DOM containers
+  // Replacement of fxLayout with fxLayoutGap
+  // eg, fxLayout="row" fxLayoutGap="10px" -> @include mp-fx-layout-with-gap(row, 10px)
+  // eg, fxLayout.xs="row" fxLayoutGap.xs="10px" -> @include mp-fx-layout-with-gap(row, 10px, xs)
+  @mixin mp-fx-layout-with-gap($direction, $value) {
+    @include mp-fx-layout($direction);
+    @if ($direction == row) {
+      > * {
+        margin-right: $value;
+      }
+      > *:last-child {
+        margin-right: 0;
+      }
+    } @else if ($direction == column) {
+      > * {
+        margin-bottom: $value;
+      }
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    } @else if ($direction == reverse-row) {
+      > * {
+        margin-left: $value;
+      }
+      > *:last-child {
+        margin-left: 0;
+      }
+    } @else if ($direction == reverse-column) {
+      > * {
+        margin-top: $value;
+      }
+      > *:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  // For DOM elements
+  // Replacement of fxFill
+  // eg, fxFill -> @include mp-fx-fill()
+  // eg, fxFill.gt-md -> @include mp-fx-fill(lg, xl)
+  @mixin mp-fx-fill() {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  
+  // For DOM elements
+  // Replacement of fxFlex="basis"
+  // eg, fxFlex="400px" -> @include mp-fx-flex(400px)
+  @mixin mp-fx-flex($basis) {
+    flex-basis: $basis;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  // For DOM elements
+  // Replacement of fxFlex="grow shrink basis"
+  // eg, fxFlex="1 1 auto" -> @include mp-fx-flex--gsb(1, 1, auto)
+  @mixin mp-fx-flex--gsb($grow, $shrink, $basis) {
+    flex-basis: $basis;
+    flex-grow: $grow;
+    flex-shrink: $shrink;
+  }
+  
+  // For DOM containers
+  // Replacement of fxLayoutAlign
+  // eg, fxLayoutAlignment="start center" -> @include mp-fx-layout-alignment(start, center)
+  @mixin mp-fx-layout-alignment(
+    $main-axis-alignment,
+    $cross-axis-alignment
+  ) {
+    justify-content: $main-axis-alignment;
+    align-items: $cross-axis-alignment;
+    align-content: $cross-axis-alignment;
+  }
+  
+  // For DOM elements
+  // Replacement of fxFlexAlign
+  // eg, fxFlexAlign="start" -> @include mp-fx-flex-align(start)
+  @mixin mp-fx-flex-align($direction) {
+    align-self: $direction;
+  }
+  
+  // For DOM elements
+  // Replacement of fxFlexOffset
+  // eg, fxFlexOffset="10%" -> @include mp-fx-flex-offset(10%)
+  // eg, fxFlexOffset.sm-lg="10%" -> @include mp-fx-flex-offset(10%, xs, sm, md)
+  @mixin mp-fx-flex-offset($value) {
+    margin-left: $value;
+  }
+  
+  @mixin mat-icon-size($size) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+  
+  @mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
