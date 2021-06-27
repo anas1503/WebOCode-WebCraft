@@ -1,9 +1,10 @@
-import './App.css';
+import './App.scss';
+import Highlights from './components/highlights/Highlights';
 
 function App() {
   return (
     <div className="App">
-    Hello World!
+    <Highlights/>
     </div>
   );
 }
