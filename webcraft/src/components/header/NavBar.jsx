@@ -20,13 +20,13 @@ const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link disabled" tabindex="-1">NEWS</a>
+          <a className="nav-link" >NEWS</a>
         </li>
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <button className="btn btn-outline-success" type="submit">Sign In</button>
     </div>
   </div>
 </nav>
