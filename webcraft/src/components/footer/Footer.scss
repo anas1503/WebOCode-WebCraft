@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    height: 230px;
+    background: #01094d;
+
+    .footer_row1 {
+        width: 90%;
+        margin-left: 68px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .footer-elements {
+            margin-top: 20px;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .division {
+        border: 1px solid #8a8887;
+        width: 90%;
+        margin-top: 20px;
+        margin-left: 68px;
+        color: #8a8887;
+        margin-top: 30px;
+    }
+
+    .footer_row2 {
+        .copy {
+            width: fit-content;
+            margin-top: 40px;
+            margin-left: 68px;
+            color: #8a8887;
+        }
+    }
+}
