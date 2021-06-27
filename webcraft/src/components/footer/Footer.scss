@@ -11,7 +11,7 @@
         justify-content: space-between;
 
         .footer-elements {
-            margin-top: 20px;
+            margin-top: 30px;
             width: 70%;
             display: flex;
             justify-content: space-between;
@@ -28,11 +28,22 @@
     }
 
     .footer_row2 {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
         .copy {
             width: fit-content;
             margin-top: 40px;
             margin-left: 68px;
             color: #8a8887;
+        }
+
+        .icons{
+            margin-top: 40px;
+            width: 10%;
+            display: flex;
+            justify-content: space-between;
+
         }
     }
 }

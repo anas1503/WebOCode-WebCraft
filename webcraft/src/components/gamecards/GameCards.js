@@ -6,8 +6,8 @@ const GameCards = () => {
             <h3>TRENDING NOW</h3>
             <div className="row">
                 <div className="col-md-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
+                    <div id="carouselExampleIndicators" class="carousel slide game" data-bs-ride="carousel">
+                        <div class="carousel-indicators ">
                             <button style={{ display: "none" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button style={{ display: "none" }} className="my-0 disabled" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 
