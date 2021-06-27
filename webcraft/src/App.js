@@ -9,6 +9,7 @@ function App() {
     <GameCards />
       <Footer />
     <Landing/>
+    <Improve/>
     </div>
   );
 }
